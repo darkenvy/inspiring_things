@@ -7,6 +7,7 @@ var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('./config/passportConfig');
 var app = express();
+var path = require('path');
 var isLoggedIn = require('./middleware/isLoggedIn');
 
 // Set and Use Statments
@@ -35,7 +36,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/profile', isLoggedIn, function(req, res) {
-    res.render('/profile');
+    res.render('profile');
 });
 
 

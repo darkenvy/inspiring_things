@@ -7,7 +7,7 @@ var router = express.Router();
 // Routes
 
 router.get('/login', function(req, res) {
-    res.render('loginform');
+    res.render('login');
 });
 
 router.post('/login', passport.authenticate('local', {
@@ -17,18 +17,22 @@ router.post('/login', passport.authenticate('local', {
     failureFlash: 'Uh oh, something went wrong. Please try again.'
 }));
 
-router.get('/signup', function(req, res, next) {
+router.get('/signup', function(req, res) {
+    res.render('signup');
+});
+
+router.post('/signup', function(req, res, next) {
     db.user.findOrCreate({
         where: { email: req.body.email },
         defaults: {
             'firstName': req.body.firstName,
             'password': req.body.password
         }
-    }).spread(function(user, wasCreate) {
+    }).spread(function(user, wasCreated) {
         if (wasCreated) {
             passport.authenticate('local', {
                 successRedirect: '/profile',
-                successFlash: 'Account created, and you have logged in.',
+                successFlash: 'Account was created, and you have logged in.',
                 failureRedirect: '/login',
                 failureFlash: 'Uh oh, something went wrong. Please try again.'
             })(req, res, next)

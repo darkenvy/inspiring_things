@@ -1,1 +1,20 @@
-login.ejs
+<div class="container row login-form">
+	<div class="col s12 offset-s2">
+		<h4>Login to Your Account</h4>
+		<p>Use the email address and password you signed up with to sign in to your account. If you created your account using Facebook, please login with Facebook now.</p>
+		<form class="col s12" action="/auth/login" method="POST" role="form">
+			<div class="input-field">
+				<i class="material-icons prefix">email</i>
+				<input id="icon_email" type="email" name="email" class="validate">
+				<label for="icon_email">Email Address</label>
+			</div>
+			<div class="input-field">
+				<i class="material-icons prefix">lock</i>
+				<input id="icon_lock" type="password" name="password" class="validate">
+				<label for="icon_lock">Password</label>
+			</div>
+			<button class="btn-large right" type="submit" name="action">Log In<i class="material-icons right">send</i></button>
+		</form>
+		<a href='/auth/facebook' class="btn btn-large left col s6">OR login with Facebook</a>
+	</div>
+</div>
