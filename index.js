@@ -10,12 +10,14 @@ var app = express();
 var path = require('path');
 var isLoggedIn = require('./middleware/isLoggedIn');
 var db = require('./models');
+var request = require('request');
 
 // Set and Use Statments
 
 app.set('view engine', 'ejs');
 app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(__dirname + '/static/'));
 app.use(ejsLayouts);
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -41,24 +43,15 @@ app.get('/profile', isLoggedIn, function(req, res) {
     res.render('profile');
 });
 
+app.get('/create', isLoggedIn, function(req, res) {
+    res.render('create');
+})
 
-// req.user? -- isLoggedIn
-
-// app.get('/:id', isLoggedIn, function(req, res) {
-//     db.user.find({
-//         where: { email: req.params.email }
-//     }).then(function(user) {
-//         if (!user) throw Error();
-//         res.render('profile', { user: user });
-//     }).catch(function(error) {
-//         res.status(400);
-//     });
-// });
-
-// app.get('/profile', isLoggedIn, function(req, res) {
-//     res.render('profile', user);
-// });
-
+app.get('/getpic', isLoggedIn, function(req, res) {
+    request('https://api.unsplash.com/photos/random?client_id=75ed119a8340d2bb9f1a6c18f08b760f0c3ec4859b1c1395cced95b91a07cce3', function(error, response, body) {
+        res.send(body);
+    });
+})
 
 // Controllers
 app.use('/auth', require('./controllers/auth'));

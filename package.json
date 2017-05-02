@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/alainabuzas/inspiring_things#readme",
   "dependencies": {
+    "babel-register": "^6.24.1",
     "bcrypt": "^1.0.2",
     "body-parser": "^1.17.1",
     "connect-flash": "^0.1.1",
@@ -27,14 +28,19 @@
     "express": "^4.15.2",
     "express-ejs-layouts": "^2.3.0",
     "express-session": "^1.15.2",
+    "form-urlencoded": "^1.5.0",
     "materialize-css": "^0.98.2",
     "morgan": "^1.8.1",
+    "node-fetch": "^1.6.3",
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "pg": "^6.1.5",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^3.30.4"
+    "request": "^2.81.0",
+    "sequelize": "^3.30.4",
+    "universal-config": "^0.3.0",
+    "unsplash-js": "^4.6.0"
   }
 }
