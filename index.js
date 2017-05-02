@@ -9,10 +9,12 @@ var passport = require('./config/passportConfig');
 var app = express();
 var path = require('path');
 var isLoggedIn = require('./middleware/isLoggedIn');
+var db = require('./models');
 
 // Set and Use Statments
 
 app.set('view engine', 'ejs');
+app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(ejsLayouts);
 app.use(session({
@@ -36,7 +38,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/profile', isLoggedIn, function(req, res) {
-    res.render('profile');
+    res.render('profile', { user: user });
 });
 
 

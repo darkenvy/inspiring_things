@@ -50,8 +50,8 @@ module.exports = function(sequelize, DataTypes) {
                 delete data.password;
                 return data;
             },
-            getFullName: function() {
-                return this.firstName + " " + this.lastName;
+            getName: function() {
+                return this.firstName;
             }
         }
     });
