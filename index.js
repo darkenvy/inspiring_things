@@ -38,8 +38,26 @@ app.get('/', function(req, res) {
 });
 
 app.get('/profile', isLoggedIn, function(req, res) {
-    res.render('profile', { user: user });
+    res.render('profile');
 });
+
+
+// req.user? -- isLoggedIn
+
+// app.get('/:id', isLoggedIn, function(req, res) {
+//     db.user.find({
+//         where: { email: req.params.email }
+//     }).then(function(user) {
+//         if (!user) throw Error();
+//         res.render('profile', { user: user });
+//     }).catch(function(error) {
+//         res.status(400);
+//     });
+// });
+
+// app.get('/profile', isLoggedIn, function(req, res) {
+//     res.render('profile', user);
+// });
 
 
 // Controllers

@@ -50,7 +50,7 @@ module.exports = function(sequelize, DataTypes) {
                 delete data.password;
                 return data;
             },
-            getName: function() {
+            getFullName: function() {
                 return this.firstName;
             }
         }

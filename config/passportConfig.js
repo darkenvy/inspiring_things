@@ -1,6 +1,6 @@
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
-var FacebookStrategy = require('passport-facebook');
+var FacebookStrategy = require('passport-facebook').Strategy;
 var db = require('../models');
 
 passport.serializeUser(function(user, cb) {
@@ -15,7 +15,7 @@ passport.deserializeUser(function(id, cb) {
 
 passport.use(new localStrategy({
     usernameField: 'email',
-    passwordField: 'password',
+    passwordField: 'password'
 }, function(email, password, cb) {
     db.user.findOne({
         where: { email: email }
@@ -58,7 +58,7 @@ passport.use(new FacebookStrategy({
                     facebookToken: accessToken,
                     email: email,
                     firstName: profile.displayName.split(' ')[0],
-                    lastName: profile.displayName.split(' ')[1],
+                    lastName: profile.displayName.split(' ')[1]
                 }
             }).spread(function(user, wasCreated) {
                 if (wasCreated) {
@@ -69,11 +69,11 @@ passport.use(new FacebookStrategy({
                     user.facebookToken = accessToken;
                     user.save().then(function() {
                         cb(null, user);
-                    }).catch(cb);
+                    });
                 }
             }).catch(cb);
         }
-    })
+    });
 }));
 
 module.exports = passport;
