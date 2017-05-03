@@ -7,7 +7,7 @@ $(document).ready(function() {
             type: 'GET',
             success: function(photo) {
                 var newpic = JSON.parse(photo);
-                $('#bigpicture').attr('src', newpic.urls.small);
+                $('#bigpicture').attr('src', newpic.urls.regular);
             }
         });
     });

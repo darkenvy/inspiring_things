@@ -1,11 +1,4 @@
-/*.create-photo {
-    height: 100vh;
-    width: 100vw;
+.create-page {
+    display: grid;
+    grid-template-columns: 1fr;
 }
-
-.big-image {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-}
-*/
