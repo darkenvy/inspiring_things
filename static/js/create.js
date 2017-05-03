@@ -11,4 +11,19 @@ $(document).ready(function() {
             }
         });
     });
-})
+
+    $('#newquote').click(function() {
+        console.log('clicked it');
+        $.ajax({
+            url: '/getquote',
+            type: 'GET',
+            success: function(data) {
+                var newquote = JSON.parse(data)[0];
+                $('#qod-quote').html(newquote.content);
+            },
+            error: function(error) {
+                console.log(error)
+            }
+        });
+    });
+});

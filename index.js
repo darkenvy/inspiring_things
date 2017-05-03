@@ -43,12 +43,18 @@ app.get('/profile', isLoggedIn, function(req, res) {
     res.render('profile');
 });
 
-app.get('/create', isLoggedIn, function(req, res) {
+app.get('/create', function(req, res) {
     res.render('create');
 })
 
 app.get('/getpic', isLoggedIn, function(req, res) {
-    request('https://api.unsplash.com/photos/random?client_id=75ed119a8340d2bb9f1a6c18f08b760f0c3ec4859b1c1395cced95b91a07cce3', function(error, response, body) {
+    request('https://api.unsplash.com/photos/random?client_id=75ed119a8340d2bb9f1a6c18f08b760f0c3ec4859b1c1395cced95b91a07cce3',
+        function(error, response, body) {
+            res.send(body);
+        });
+})
+app.get('/getquote', function(req, res) {
+    request('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1', function(error, response, body) {
         res.send(body);
     });
 })
