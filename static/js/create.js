@@ -19,11 +19,10 @@ $(document).ready(function() {
             type: 'GET',
             success: function(data) {
                 var newquote = JSON.parse(data)[0];
-                $('#qod-quote').html(newquote.content);
-            },
-            error: function(error) {
-                console.log(error)
+                $('#qod-quote').empty().append(newquote.content + "<p> –" + newquote.title + "</p>");
             }
         });
     });
 });
+// $('#qod-quote').html(newquote.content);
+//

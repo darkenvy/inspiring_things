@@ -43,7 +43,7 @@ app.get('/profile', isLoggedIn, function(req, res) {
     res.render('profile');
 });
 
-app.get('/create', function(req, res) {
+app.get('/create', isLoggedIn, function(req, res) {
     res.render('create');
 })
 
@@ -53,7 +53,7 @@ app.get('/getpic', isLoggedIn, function(req, res) {
             res.send(body);
         });
 })
-app.get('/getquote', function(req, res) {
+app.get('/getquote', isLoggedIn, function(req, res) {
     request('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1', function(error, response, body) {
         res.send(body);
     });
