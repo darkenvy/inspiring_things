@@ -53,11 +53,12 @@ app.get('/getpic', isLoggedIn, function(req, res) {
             res.send(body);
         });
 })
+
 app.get('/getquote', isLoggedIn, function(req, res) {
     request('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1', function(error, response, body) {
         res.send(body);
     });
-})
+});
 
 // Controllers
 app.use('/auth', require('./controllers/auth'));
