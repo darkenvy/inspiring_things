@@ -1,15 +1,29 @@
 <script src="http://quotesondesign.com/api/3.0/api-3.0.js" type="text/javascript" charset="utf-8"></script>
+<body>
 <div class="create-page">
-   	<div class="big-image">
+   	<div class="big-image overlaps">
         <img src="https://source.unsplash.com/random" alt="unsplash photo" id="bigpicture">
     </div>
-    <div class="design-quote">
-    	<blockquote id="qod-quote">
+    <div class="design-quote overlaps">
+    	<p class="flow-text" id="qod-quote">
   			 ... loading ...
-			</blockquote>
+			</p>
     </div>
-    <div class="new-buttons">
-    	<a class="btn black" id="newquote">Get New Inspirational Quote</a>
-    	<a class="btn black" id="newimage">Get New Inspirational Image</a>
+    <div class="new-buttons overlaps">
+      <div class="fixed-action-btn horizontal click-to-toggle">
+        <a class="btn-floating btn-large black">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul>
+         <li><a class="btn-floating amber darken-1" id="newimage"><i class="material-icons">photo</i></a></li>
+         <li><a class="btn-floating light-green darken-2" id="newquote"><i class="material-icons">chat</i></a></li>
+         <li><a class="btn-floating yellow accent-4"><i class="material-icons">file_download</i></a></li>
+         <li><a class="btn-floating lime" href="/profile"><i class="material-icons">account_circle</i></a></li>
+        </ul>
+     </div>
     </div>
 </div>
+</body>
+<!-- <div class="again newthing"><i class="small material-icons white circle">loop</i></div>
+        <a class="btn black newthing" id="newquote">Get New Inspirational Quote</a>
+        <a class="btn black newthing" id="newimage">Get New Inspirational Image</a> -->

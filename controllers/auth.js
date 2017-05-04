@@ -11,7 +11,7 @@ router.get('/login', function(req, res) {
 });
 
 router.post('/login', passport.authenticate('local', {
-    successRedirect: '/profile',
+    successRedirect: '/create',
     successFlash: 'You are logged in.',
     failureRedirect: '/auth/login',
     failureFlash: 'Uh oh, something went wrong. Please try again.'
@@ -26,6 +26,7 @@ router.post('/signup', function(req, res, next) {
         where: { email: req.body.email },
         defaults: {
             'firstName': req.body.firstName,
+            'lastName': req.body.lastName,
             'password': req.body.password
         }
     }).spread(function(user, wasCreated) {

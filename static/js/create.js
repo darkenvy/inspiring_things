@@ -24,5 +24,3 @@ $(document).ready(function() {
         });
     });
 });
-// $('#qod-quote').html(newquote.content);
-//

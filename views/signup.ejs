@@ -1,19 +1,23 @@
-  <div class="row signup-form">
-  <div class="col s12 offset-s2">
-  <h4>Sign Up</h4>
-  <p>Sign up to start creating your own inspiring things! When you login in the future, you'll need your email address and password.</p>
+<div class="container">
+  <div class="signup-form row">
+    <h4 class="col s12">Sign up to start creating inspiring things</h4>
+    <p class="col s12">Sign up to start creating your own inspiring things! When you login in the future, you'll need your email address and password.</p>
     <form class="col s12" action="/auth/signup" method="POST" role="form">
-        <div class="input-field">
+        <div class="input-field col m6 s12">
           <i class="material-icons prefix">account_circle</i>
           <input id="icon_prefix" type="text" name="firstName" class="validate">
           <label for="icon_prefix">First Name</label>
         </div>
-        <div class="input-field">
+        <div class="input-field col m6 s12">
+          <input id="icon_last" type="text" name="lastName" class="validate">
+          <label for="icon_last">Last Name</label>
+        </div>
+        <div class="input-field col m6 s12">
           <i class="material-icons prefix">email</i>
           <input id="icon_email" type="email" name="email" class="validate">
           <label for="icon_email">Email Address</label>
         </div>
-        <div class="input-field">
+        <div class="input-field col m6 s12">
           <i class="material-icons prefix">lock</i>
           <input id="icon_lock" type="password" name="password" class="validate">
           <label for="icon_lock">Password</label>
@@ -21,6 +25,6 @@
         <button class="btn-large right" type="submit" name="action">Sign Up<i class="material-icons right">send</i>
         </button>
     </form>
-    <a href='/auth/facebook' class="blue btn-large left col s6">OR sign up with Facebook</a>
     </div>
-  </div>
+    <a href='/auth/facebook' class="blue btn-large right">OR sign up with Facebook</a>
+</div>

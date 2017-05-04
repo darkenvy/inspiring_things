@@ -1,13 +1,17 @@
 <body>
-<div>
+<div class="container row">
 	<div>
 	<h3>Hi, <%= currentUser.firstName %>!</h3>
+	<p>Welcome back to These Inspiring Things. Please update any outdated information below before continuing on to your create page. Thanks!</p>
+	</div>
+	<div>
+	<p>Full Name: <%= currentUser.firstName %> <%=currentUser.lastName%></p>
 	</div>
 	<div>
 	<p>Email: <%= currentUser.email %></p>
 	</div>
 	<div>
-	<a href='/create'>Create a new Inspiring Thing</a>
+	<a class="btn btn-large right" href='/create'>Create a new Inspiring Thing</a>
 	</div>
 </div>
 </body>
