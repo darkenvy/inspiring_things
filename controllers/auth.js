@@ -42,11 +42,11 @@ router.post('/signup', function(req, res, next) {
         res.redirect('/auth/signup');
     })
 });
-
 router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
 });
+
 
 // Facebook Auth
 router.get('/facebook', passport.authenticate('facebook', {

@@ -24,6 +24,7 @@ $(document).ready(function() {
         });
     });
 
+
     $('#fontswap').click(function() {
         console.log('trying');
         $('.type').toggleClass('typeblack');
