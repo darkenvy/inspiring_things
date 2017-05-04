@@ -10,8 +10,6 @@
         "dialect": "postgres"
     },
     "production": {
-        "database": "inspiringthings_production",
-        "host": "127.0.0.1",
-        "dialect": "postgres"
+        "use_env_variable": "https://theseinspiringthings.herokuapp.com/"
     }
 }
