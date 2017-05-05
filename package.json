@@ -43,6 +43,7 @@
     "sequelize-cli": "^2.7.0",
     "universal-config": "^0.3.0",
     "unsplash-js": "^4.6.0",
+    "url-to-screenshot": "^0.6.2",
     "urlencode": "^1.1.0"
   }
 }
