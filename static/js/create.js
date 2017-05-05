@@ -35,4 +35,10 @@ $(document).ready(function() {
         $('.type').toggleClass('typeserif');
         $('.type a').toggleClass('typeserif a');
     });
+
+    $('#download').click(function() {
+        console.log('download try');
+        window.location.href = '/save?quote=' + $('#qod-quote').text() + '&img=' + encodeURIComponent($('#bigpicture').attr('src'));
+
+    })
 });
