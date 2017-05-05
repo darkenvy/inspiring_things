@@ -24,10 +24,15 @@ $(document).ready(function() {
         });
     });
 
-
     $('#fontswap').click(function() {
         console.log('trying');
         $('.type').toggleClass('typeblack');
         $('.type a').toggleClass('typeblack a');
+    });
+
+    $('#styleswap').click(function() {
+        console.log('trying swap');
+        $('.type').toggleClass('typeserif');
+        $('.type a').toggleClass('typeserif a');
     });
 });

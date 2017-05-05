@@ -23,16 +23,23 @@
  .type {
      color: white;
      font-weight: 600;
+     font-family: 'Roboto', sans-serif;
  }
  
  .flow-text a {
      color: white;
      font-weight: 200;
+     font-family: 'Roboto', sans-serif;
  }
  
  .typeblack,
  .typeblack a {
      color: black;
+ }
+ 
+ .typeserif,
+ .typeserif a {
+     font-family: 'Robot Slab', serif;
  }
  
  .big-image img {
@@ -54,4 +61,25 @@
      font-family: 'Playfair Display', serif;
      color: white;
      letter-spacing: .05em;
+ }
+ 
+ .canvas__container {
+     height: 100%;
+     position: relative;
+     width: 100%;
+ }
+ 
+ .canvas__canvas {
+     height: 100%;
+     position: relative;
+     width: 100%;
+     z-index: 1;
+ }
+ 
+ .canvas__mirror {
+     height: 100%;
+     left: 0;
+     position: absolute;
+     top: 0;
+     width: 100%;
  }
