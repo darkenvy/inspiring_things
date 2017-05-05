@@ -63,13 +63,13 @@ app.get('/getquote', function(req, res) {
 });
 
 
-app.get('/save', function(req, res) {
-    console.log(req.query.img)
-    var decoded = urlencode.decode(req.query.img);
-    console.log(decoded)
+app.get('/save/:quote/:img', function(req, res) {
+    // console.log(req.query.img)
+    // var decoded = urlencode.decode(req.query.img);
+    // console.log(decoded)
     res.render('save', {
-        quote: req.query.quote,
-        img: decoded
+        quote: req.params.quote,
+        img: req.params.img
     });
 });
 
