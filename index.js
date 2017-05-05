@@ -60,6 +60,12 @@ app.get('/getquote', isLoggedIn, function(req, res) {
     });
 });
 
+app.get('/save', function(req, res) {
+    res.render('save', {
+        quote: req.query.quote,
+        img: req.query.img
+    });
+});
 
 // Controllers
 app.use('/auth', require('./controllers/auth'));

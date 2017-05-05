@@ -39,7 +39,8 @@
  
  .typeserif,
  .typeserif a {
-     font-family: 'Robot Slab', serif;
+     font-family: 'Roboto Slab', serif;
+     font-weight: 400;
  }
  
  .big-image img {
