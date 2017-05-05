@@ -11,6 +11,8 @@ var path = require('path');
 var isLoggedIn = require('./middleware/isLoggedIn');
 var db = require('./models');
 var request = require('request');
+var screenshot = require('url-to-screenshot');
+var urlencode = require('urlencode');
 
 // Set and Use Statments
 
@@ -60,7 +62,10 @@ app.get('/getquote', isLoggedIn, function(req, res) {
     });
 });
 
+
 app.get('/save', function(req, res) {
+    req.query.quote = urlencode.decode(req.query.quote);
+    console.log(req.img)
     res.render('save', {
         quote: req.query.quote,
         img: req.query.img

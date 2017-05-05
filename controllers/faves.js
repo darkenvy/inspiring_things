@@ -25,10 +25,11 @@ router.post('/', function(req, res) {
     }).spread(function(fave, wasCreated) {
         db.user.findbyId(req.user.id)
             .then(function(user) {
-                user.addFavorite
-            })
-    })
-})
+                user.addFave(fave)
+                    .then(function(fave) {});
+            });
+    });
+});
 
 // Export
 module.exports = router;
