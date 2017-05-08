@@ -6,30 +6,30 @@ Combining procrastination and inspiration for a more enjoyable and productive wo
 <h2>Technologies Used</h2>
 
 <h4>API's</h4>
-- Facebook Authorization: for signingup or logging in
-- Unsplash: Generates a random photo from it's database on the Create page of These Inspiring Things
-- Quotes on Design: Generates a random quote about design or by a designer from it's database on the Create page of These Inspiring Things
+<li>Facebook Authorization: for signingup or logging in</li>
+<li>Unsplash: Generates a random photo from it's database on the Create page of These Inspiring Things</li>
+<li>Quotes on Design: Generates a random quote about design or by a designer from it's database on the Create page of These Inspiring Things</li>
 
 <h4>CSS</h4>
-- CSS Grid: I learned CSS Grid for this project, and ended up implementing it solely on the Create page in order to establish a well-layered experience
-- Materialize: Materialize was used on every user-facing page of These Inspiring Things, with adjustments made to colors and fonts in some situations
+<li>CSS Grid: I learned CSS Grid for this project, and ended up implementing it solely on the Create page in order to establish a well-layered experience</li>
+<li>Materialize: Materialize was used on every user-facing page of These Inspiring Things, with adjustments made to colors and fonts in some situations</li>
 
 <h4>Languages</h4>
-- HTML
-- CSS
-- JavaScript
-- jQuery
-- Node
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>jQuery</li>
+<li>Node</li>
 
 <h4>GitHub & HerokuApp</h4>
-- These Inspiring Things is lives in a respository on GitHub, and is also currently hosted on HerokuAPp
+These Inspiring Things lives in a respository on GitHub, and is also currently hosted on HerokuAPp
 
 <h4>Other</h4>
-- These Inspiring Things was written using Sublime Text Editor
-- Databases were managed using Postgres and Postico
-- These Inspiring Things was organized and managed using Trello
-- Postman was used to test routes
-- PhantomJS: While this was not used for the final step of this project, it will be re-implemented in the future for automating the screenshot function for users.
+<li>These Inspiring Things was written using Sublime Text Editor</li>
+<li>Databases were managed using Postgres and Postico</li>
+<li>These Inspiring Things was organized and managed using Trello</li>
+<li>Postman was used to test routes</li>
+<li>PhantomJS: While this was not used for the final step of this project, it will be re-implemented in the future for automating the screenshot function for users.</li>
 
 
 <h2>Approach</h2>
