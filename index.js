@@ -13,6 +13,7 @@ var db = require('./models');
 var request = require('request');
 var screenshot = require('url-to-screenshot');
 var urlencode = require('urlencode');
+var fs = require('fs');
 
 // Set and Use Statments
 
@@ -63,15 +64,17 @@ app.get('/getquote', function(req, res) {
 });
 
 
+// app.get('/save/:quote/:img/:color/:fontfamily')
 app.get('/save/:quote/:img', function(req, res) {
-    // console.log(req.query.img)
-    // var decoded = urlencode.decode(req.query.img);
-    // console.log(decoded)
+    console.log(req.query.img)
+    var decoded = urlencode.decode(req.query.img);
+    console.log(decoded)
     res.render('save', {
         quote: req.params.quote,
         img: req.params.img
     });
 });
+
 
 // Controllers
 app.use('/auth', require('./controllers/auth'));

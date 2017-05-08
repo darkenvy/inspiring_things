@@ -38,7 +38,9 @@ $(document).ready(function() {
 
     $('#download').click(function() {
         console.log('download try');
-        window.location.href = '/save/' + encodeURIComponent($('#qod-quote').text()) + '/' + encodeURIComponent($('#bigpicture').attr('src'));
+        window.location.href = '/save/' +
+            encodeURIComponent($('#qod-quote').text()) + '/' +
+            encodeURIComponent($('#bigpicture').attr('src'));
 
     })
 });
