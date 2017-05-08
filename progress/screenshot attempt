@@ -1,0 +1,81 @@
+screenshot attempt
+
+
+index.js
+
+// download button to screenshot route
+// app.get('/downloadimg', function(req, res) {
+//     var urltopic = ('/save/:quote/:img', function(req, res) {
+//         var decoded = urlencode.decode(req.query.img);
+//         var combourl = window.location.href = '/save/' +
+//             encodeURIComponent($('#qod-quote').text()) + '/' +
+//             encodeURIComponent($('#bigpicture').attr('src'));
+//     });
+//     screenshot('urltopic', {
+//             ignoreSslErrors: true,
+//             sslProtocol: any,
+//             format: jpg
+//         })
+//         .width(1200)
+//         .height(800)
+//         .capture(function(err, img) {
+//             if (err) throw err;
+//             res.writeHead(200, {
+//                 'Content-Type': 'image/png'
+//             });
+//             res.end(img, 'binary');
+//         });
+
+// });
+
+
+create.js
+// $('#download').click(function() {
+//     $.ajax({
+//         url: '/downloadimg',
+//         type: 'GET'
+//         success: function(img) {
+//             $(screenshot('/downloadimg', {
+//                     ignoreSslErrors: true,
+//                     sslProtocol: any,
+//                     format: jpg
+//                 }))
+//                 .width(1200)
+//                 .height(800)
+//                 .capture(function(err, img) {
+//                     if (err) throw err;
+//                     res.writeHead(200, {
+//                         'Content-Type': 'image/png'
+//                     });
+//                     res.end(img, 'binary');
+//                 });
+
+//         };
+//     });
+
+rendering:
+
+
+    $('#download').click(function() {
+        console.log('download try');
+        window.location.href = '/save/' +
+            encodeURIComponent($('#qod-quote').text()) + '/' +
+            encodeURIComponent($('#bigpicture').attr('src'));
+
+    })
+
+
+app.get('/save/:quote/:img', function(req, res) {
+    console.log(req.query.img)
+    var decoded = urlencode.decode(req.query.img);
+    console.log(decoded)
+    res.render('save', {
+        quote: req.params.quote,
+        img: req.params.img
+    });
+});
+
+create.ejs
+
+         <li><a class="btn-floating yellow accent-4" id="download"><i class="material-icons">file_download</i></a></li>
+
