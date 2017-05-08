@@ -2,6 +2,7 @@
 
 Combining procrastination and inspiration for a more enjoyable and productive work day.
 
+<img src="/progress/0507_full.png" alt="fullscreen">
 
 <h2>Technologies Used</h2>
 
