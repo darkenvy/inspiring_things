@@ -1,86 +1,97 @@
- /*CREATE*/
- 
- .create-page {
-     display: grid;
-     grid-template-columns: repeat(8, 1fr);
- }
- 
- .overlaps:nth-child(1) {
-     grid-column: 1 / 9;
-     grid-row: 1 / 6;
- }
- 
- .overlaps:nth-child(2) {
-     grid-column: 3 / 7;
-     grid-row: 3 / 4;
- }
- 
- .overlaps:nth-child(3) {
-     grid-column: 1 / 2;
-     grid-row: 1 / 2;
- }
- 
- .type {
-     color: white;
-     font-weight: 600;
-     font-family: 'Roboto', sans-serif;
- }
- 
- .flow-text a {
-     color: white;
-     font-weight: 200;
-     font-family: 'Roboto', sans-serif;
- }
- 
- .typeblack,
- .typeblack a {
-     color: black;
- }
- 
- .typeserif,
- .typeserif a {
-     font-family: 'Roboto Slab', serif;
-     font-weight: 400;
- }
- 
- .big-image img {
-     width: 100%;
- }
- 
- .big-image {
-     overflow: hidden;
- }
- 
- .hpbg {
-     width: 100vw;
-     height: 100vh;
-     background-image: url('https://source.unsplash.com/random');
-     background-size: cover;
- }
- 
- .hpbg h1 {
-     font-family: 'Playfair Display', serif;
-     color: white;
-     letter-spacing: .05em;
- }
- 
- .canvas__container {
-     height: 100%;
-     position: relative;
-     width: 100%;
- }
- 
- .canvas__canvas {
-     height: 100%;
-     position: relative;
-     width: 100%;
-     z-index: 1;
- }
- 
- .canvas__mirror {
-     height: 100%;
-     left: 0;
-     position: absolute;
-     top: 0;
-     width: 100%;
- }
+/*CREATE*/
+
+.create-page {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.overlaps:nth-child(1) {
+    grid-column: 1 / 9;
+    grid-row: 1 / 6;
+}
+
+.overlaps:nth-child(2) {
+    grid-column: 3 / 7;
+    grid-row: 3 / 4;
+}
+
+.overlaps:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.type {
+    color: white;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.flow-text a {
+    color: white;
+    font-weight: 200;
+    font-family: 'Roboto', sans-serif;
+}
+
+.typeblack,
+.typeblack a {
+    color: black;
+}
+
+.typeserif,
+.typeserif a {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+.big-image img {
+    width: 100%;
+}
+
+.big-image {
+    overflow: hidden;
+}
+
+.hpbg {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://source.unsplash.com/random');
+    background-size: cover;
+}
+
+.hpbg h1 {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    letter-spacing: .05em;
+}
+
+.canvas__container {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.canvas__canvas {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.canvas__mirror {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+/* below isn't working on signup and login pages */
+
+.playfair h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Playfair Display", cursive !important;
+}

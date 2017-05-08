@@ -36,11 +36,4 @@ $(document).ready(function() {
         $('.type a').toggleClass('typeserif a');
     });
 
-    $('#download').click(function() {
-        console.log('download try');
-        window.location.href = '/save/' +
-            encodeURIComponent($('#qod-quote').text()) + '/' +
-            encodeURIComponent($('#bigpicture').attr('src'));
-
-    })
 });

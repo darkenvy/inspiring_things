@@ -46,7 +46,11 @@ app.get('/profile', isLoggedIn, function(req, res) {
     res.render('profile');
 });
 
-app.get('/create', function(req, res) {
+app.get('/instructions', isLoggedIn, function(req, res) {
+    res.render('instructions');
+});
+
+app.get('/create', isLoggedIn, function(req, res) {
     res.render('create');
 })
 
@@ -60,18 +64,6 @@ app.get('/getpic', function(req, res) {
 app.get('/getquote', function(req, res) {
     request('https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1', function(error, response, body) {
         res.send(body);
-    });
-});
-
-
-// app.get('/save/:quote/:img/:color/:fontfamily')
-app.get('/save/:quote/:img', function(req, res) {
-    console.log(req.query.img)
-    var decoded = urlencode.decode(req.query.img);
-    console.log(decoded)
-    res.render('save', {
-        quote: req.params.quote,
-        img: req.params.img
     });
 });
 

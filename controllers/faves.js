@@ -31,5 +31,8 @@ router.post('/', function(req, res) {
     });
 });
 
+// display quote on profile page
+
+
 // Export
 module.exports = router;
