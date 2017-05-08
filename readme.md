@@ -31,7 +31,7 @@ These Inspiring Things lives in a respository on GitHub, and is also currently h
 <li>These Inspiring Things was organized and managed using Trello</li>
 <li>Postman was used to test routes</li>
 <li>PhantomJS: While this was not used for the final step of this project, it will be re-implemented in the future for automating the screenshot function for users.</li>
-
+<br>
 <img src="/progress/0507_quote_menu.png" alt="quote menu">
 
 
