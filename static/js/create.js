@@ -1,5 +1,8 @@
 console.log('loaded js')
 $(document).ready(function() {
+
+    $('.modal').modal();
+
     $('#newimage').click(function() {
         console.log('clickity clack');
         $.ajax({

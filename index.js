@@ -68,6 +68,7 @@ app.get('/getquote', function(req, res) {
 });
 
 
+
 // Controllers
 app.use('/auth', require('./controllers/auth'));
 
